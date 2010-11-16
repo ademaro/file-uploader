@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	  <title>Закачать файлы</title>
+		<link href="fileuploader.css" rel="stylesheet" type="text/css">	
+    <style>    	
+			body {font-size:17px;font-family:Constantina,Georgia,'Nimbus Roman No9 L',serif;width:700px;margin:100px auto;}
+    </style>	
+</head>
+<body>		
+    
+	<p>Для закачки файла нажми на кнопку ниже. Drag-and-drop работает в FF и Chrome.</p>
+	<p>Поддержка полосы прокрутки в FF3.6+, Chrome6+, Safari4+</p>
+	
+	<div id="file-uploader">		
+		<noscript>			
+			<p>Загрузка не работает с выключенным JavaScript.</p>
+			<!-- or put a simple form for upload here -->
+		</noscript>         
+	</div>
+    
+    <script src="fileuploader.js" type="text/javascript"></script>
+    <script>        
+        function createUploader(){            
+            var uploader = new qq.FileUploader({
+                element: document.getElementById('file-uploader'),
+                action: '../server/upload.php',
+                debug: true
+            });           
+        }
+        
+        // in your app create uploader as soon as the DOM is ready
+        // don't wait for the window to load  
+        window.onload = createUploader;     
+    </script>    
+</body>
+</html>
