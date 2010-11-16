@@ -2,20 +2,20 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link href="fileuploader.css" rel="stylesheet" type="text/css">	
+	  <title>Закачать файлы</title>
+		<link href="fileuploader.css" rel="stylesheet" type="text/css">	
     <style>    	
-		body {font-size:13px; font-family:arial, sans-serif; width:700px; margin:100px auto;}
+			body {font-size:17px;font-family:Constantina,Georgia,'Nimbus Roman No9 L',serif;width:700px;margin:100px auto;}
     </style>	
 </head>
 <body>		
-    <p><a href="http://github.com/valums/file-uploader">Back to project page</a></p>
     
-	<p>To upload a file, click on the button below. Drag-and-drop is supported in FF, Chrome.</p>
-	<p>Progress-bar is supported in FF3.6+, Chrome6+, Safari4+</p>
+	<p>Для закачки файла нажми на кнопку ниже. Drag-and-drop работает в FF и Chrome.</p>
+	<p>Поддержка полосы прокрутки в FF3.6+, Chrome6+, Safari4+</p>
 	
-	<div id="file-uploader-demo1">		
+	<div id="file-uploader">		
 		<noscript>			
-			<p>Please enable JavaScript to use file uploader.</p>
+			<p>Загрузка не работает с выключенным JavaScript.</p>
 			<!-- or put a simple form for upload here -->
 		</noscript>         
 	</div>
@@ -24,7 +24,7 @@
     <script>        
         function createUploader(){            
             var uploader = new qq.FileUploader({
-                element: document.getElementById('file-uploader-demo1'),
+                element: document.getElementById('file-uploader'),
                 action: 'do-nothing.htm',
                 debug: true
             });           
